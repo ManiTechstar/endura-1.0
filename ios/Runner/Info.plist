@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Endura App</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>endura_app</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+    <string>This app needs access to Apple Music to access music library</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>This app needs access to Bluetooth to connect devices in surrounding network</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>This app needs access to Calender to access and add calendar events</string>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to Camera to take photos for resume</string>
+    <key>NSContactsUsageDescription</key>
+    <string>This app needs access to Contacts to access contacts</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app needs access to Location to detect and save locations</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app needs access to Microphone for recording</string>
+    <key>NSMotionUsageDescription</key>
+    <string>This app needs access to Motion sensors for detecting location changes</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>This app needs access to Photo Library to upload photos or documents for resume</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs access to Photo Library to upload photos or documents for resume</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>This app needs access to Microphone for speech recognition</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+</dict>
+</plist>
