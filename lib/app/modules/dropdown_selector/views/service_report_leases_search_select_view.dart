@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_company_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_lease_selector_controller.dart';
 import 'package:endura_app/app/modules/service_report/controllers/service_report_controller.dart';
@@ -45,12 +47,13 @@ _getLeaseFieldWidget(ServiceReportLeaseSelectorController cController) {
         ));
 
         if (item != null) {
-          List list = cController.model.value.result
-              !.where((element) => element.location == item)
+          List list = cController.model.value.result!
+              .where((element) => element.location == item)
               .toList();
 
-            Get.find<ServiceReportController>()
-                .getProductsByLocation(customerId: list[0].customerId,location: list[0].location);
+          print(list[0].location);
+          Get.find<ServiceReportController>().getProductsByLocation(
+              customerId: list[0].customerId, location: list[0].location);
           cController.selectedLeaseName(item);
         }
       },

@@ -1,5 +1,7 @@
+// ignore_for_file: must_be_immutable
+
+import 'package:endura_app/app/data/model/account_representative_list_model.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/analysis_form_company_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_company_selector_controller.dart';
 import 'package:endura_app/core/base/controllers/base_controller.dart';
 import 'package:endura_app/core/base/views/search_selection_dialog_view.dart';
@@ -13,7 +15,7 @@ import 'package:shimmer/shimmer.dart';
 
 class ServiceReportRepresentativeSearchSelectView
     extends SearchView<AccountRepresentativeSelectorController> {
-  ServiceReportRepresentativeSearchSelectView();
+  ServiceReportRepresentativeSearchSelectView({Key? key}) : super(key: key);
 
   @override
   Widget cBuild(BuildContext context,
@@ -23,27 +25,45 @@ class ServiceReportRepresentativeSearchSelectView
           ? _getShimmerLoader()
           : InkWell(
               onTap: () async {
-                var item = await Get.dialog(SearchSelectionDialogView(
-                  items: cController.routes,
-                  searchHint: 'Select Representative',
-                  title: 'Representatives',
-                  function: (index) async {
-                    print(cController.model.value.result![index].sId);
-                    print(cController.model.value.result![index].name);
-                    cController.selectedRepresentativeId =
-                        cController.model.value.result![index].sId!;
-                    ServiceReportCompanySelectorController
-                        analysisFormCompanySelectorController =
-                        Get.find<ServiceReportCompanySelectorController>();
-                    await analysisFormCompanySelectorController
-                        .getCustomersOrCompaniesByRepId(
-                            id: cController.model.value.result![index].sId);
-                    analysisFormCompanySelectorController
-                        .selectedCompanyName.value = 'Select Company';
-                  },
-                ));
+                var item = await Get.dialog(
+                  SearchSelectionDialogView(
+                    items: cController.routes,
+                    searchHint: 'Select Representative',
+                    title: 'Representatives',
+                    // function: (index) async {
+                    //   print(cController.model.value.result![index].sId);
+                    //   print(cController.model.value.result![index].name);
+                    //   cController.selectedRepresentativeId =
+                    //       cController.model.value.result![index].sId!;
+                    //   ServiceReportCompanySelectorController
+                    //       analysisFormCompanySelectorController =
+                    //       Get.find<ServiceReportCompanySelectorController>();
+                    //   await analysisFormCompanySelectorController
+                    //       .getCustomersOrCompaniesByRepId(
+                    //           id: cController.model.value.result![index].sId);
+                    //   analysisFormCompanySelectorController
+                    //       .selectedCompanyName.value = 'Select Company';
+                    // },
+                  ),
+                );
 
                 if (item != null) {
+                  List<AccountRepresentativeListModelResult> list = cController
+                      .model.value.result!
+                      .where((element) => element.name == item)
+                      .toList();
+
+                  print(list[0].sId);
+                  print(list[0].name);
+
+                  ServiceReportCompanySelectorController
+                      analysisFormCompanySelectorController =
+                      Get.find<ServiceReportCompanySelectorController>();
+                  await analysisFormCompanySelectorController
+                      .getCustomersOrCompaniesByRepId(id: list[0].sId);
+                  analysisFormCompanySelectorController
+                      .selectedCompanyName.value = 'Select Company';
+
                   cController.selectedRepresentativeName(item);
                 }
               },

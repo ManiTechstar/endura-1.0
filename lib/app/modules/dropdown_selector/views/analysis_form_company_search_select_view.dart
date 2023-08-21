@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:endura_app/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/analysis_form_company_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/analysis_form_lease_selector_controller.dart';
@@ -30,19 +32,26 @@ class AnalysisFormCompanySearchSelectView
                       items: cController.companies,
                       searchHint: 'Select Company',
                       title: 'Company',
-                      function: (index) {
-                        print(
-                            'INDEXED ==> ${cController.model.value.result![index].customerId}');
+                      // function: (index) {
+                      //   print(
+                      //       'INDEXED ==> ${cController.model.value.result![index].customerId}');
 
-                        Get.find<AnalysisFormLeaseSelectorController>()
-                            .getLocationsByCustomerId(
-                                customerId: cController
-                                    .model.value.result![index].customerId);
-                      },
+                      //   Get.find<AnalysisFormLeaseSelectorController>()
+                      //       .getLocationsByCustomerId(
+                      //           customerId: cController
+                      //               .model.value.result![index].customerId);
+                      // },
                     ));
 
                     if (item != null) {
                       print('SELECTED ITEM NAME ==> $item');
+                      List list = cController.model.value.result!
+                          .where((element) => element.customerName == item)
+                          .toList();
+
+                      Get.find<AnalysisFormLeaseSelectorController>()
+                          .getLocationsByCustomerId(
+                              customerId: list[0].customerId);
                       cController.setCompanyName(name: item);
                     }
                   },

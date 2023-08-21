@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:endura_app/core/constants/color_constants.dart';
 import 'package:endura_app/core/constants/font_family_constants.dart';
 import 'package:flutter/material.dart';
@@ -10,13 +12,11 @@ class SearchSelectionDialogView extends StatefulWidget {
     required this.items,
     required this.searchHint,
     required this.title,
-    this.function,
   }) : super(key: key);
 
   List<String> items = [];
   String searchHint = '';
   String title = '';
-  final Function(int index)? function;
 
   List<String> filteredItems = [];
 
@@ -132,8 +132,6 @@ class _SearchDialogState extends State<SearchSelectionDialogView> {
                           textAlign: TextAlign.center,
                         ),
                         onTap: () {
-                          // Do something when an item is selected
-                          if (widget.function != null) widget.function!(index);
                           Get.back(result: widget.filteredItems[index]);
                         },
                       );

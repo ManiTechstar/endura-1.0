@@ -59,8 +59,8 @@ class ProductsView extends GetView<ServiceTechLeaseProductsController> {
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child: Row(
-                      children: const [
+                    child:const Row(
+                      children:  [
                         Expanded(
                           child: Text(
                             'Product',

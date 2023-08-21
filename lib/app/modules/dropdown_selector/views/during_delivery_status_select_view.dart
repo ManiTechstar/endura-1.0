@@ -29,8 +29,7 @@ class DuringDeliveryStatusSelectView
                   items: _getAllNames(),
                   searchHint: 'Update Status',
                   title: 'Task Status',
-                  function: (index) async {
-                  },
+                  
                 ));
 
                 if (item != null) {

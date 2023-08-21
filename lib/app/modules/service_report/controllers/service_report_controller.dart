@@ -4,7 +4,6 @@ import 'package:endura_app/app/modules/dropdown_selector/controllers/account_rep
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_company_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_lease_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/warehouse_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/service_report_representative_search_select_view.dart';
 import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
 import 'package:endura_app/app/providers/service_report_provider.dart';
 import 'package:endura_app/app/routes/app_pages.dart';
@@ -67,10 +66,9 @@ class ServiceReportController extends BaseController {
         if (result.products!.isNotEmpty) {
           for (Products product in result.products!) {
             nameControllers.add(TextEditingController(text: product.productId));
-            gallonsDeliveredControllers
-                .add(TextEditingController(text: product.uomGal));
+            gallonsDeliveredControllers.add(TextEditingController());
             gallonsOnHandControllers.add(TextEditingController());
-            recRateControllers.add(TextEditingController());
+            recRateControllers.add(TextEditingController(text: product.uomGal));
             actualRateControllers.add(TextEditingController());
             commentsControllers.add(TextEditingController());
             rate.value.add(false);
@@ -130,8 +128,13 @@ class ServiceReportController extends BaseController {
               await ServiceReportProvider().submitServiceReport(params: params);
           SnackbarSupporter.showSuccessSnackbar(
               title: 'Success', message: message);
+
+          clearAll();
+          mainSoar.value = false;
+          Get.find<ServiceReportLeaseSelectorController>()
+              .selectedLeaseName
+              .value = 'Select Lease';
           apiState.value = APIState.COMPLETED;
-          Get.offAllNamed(Routes.DASHBOARD);
         } catch (e) {
           SnackbarSupporter.showFailureSnackbar(
               title: 'Error', message: e.toString());

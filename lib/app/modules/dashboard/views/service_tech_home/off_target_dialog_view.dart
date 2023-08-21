@@ -1,4 +1,5 @@
-import 'dart:ffi';
+
+// ignore_for_file: must_be_immutable
 
 import 'package:endura_app/app/data/model/products_by_well_model.dart';
 import 'package:endura_app/core/constants/color_constants.dart';
@@ -14,6 +15,8 @@ class OffTargetDialogView extends GetView {
   List<Products>? products;
 
   List<TextEditingController>? controllers = [];
+
+  List<TextEditingController>? commentsControllers = [];
 
   @override
   Widget build(BuildContext context) {
@@ -98,6 +101,43 @@ class OffTargetDialogView extends GetView {
                               fontFamily: FontFamilyConstants.firasans),
                         ),
                       ),
+                      const SizedBox(
+                        height: 8.0,
+                      ),
+                      TextField(
+                        controller: commentsControllers![index],
+                        maxLines: 5,
+                        onChanged: (value) {
+                          products![index].uomGal = double.parse(value);
+                        },
+                        keyboardType: const TextInputType.numberWithOptions(
+                            signed: false, decimal: true),
+                        style: TextStyle(
+                            color: ColorConstants.black1,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                            fontFamily: FontFamilyConstants.firasans),
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(117, 25, 3, 0.13)),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Color.fromRGBO(117, 25, 3, 0.13)),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          contentPadding: const EdgeInsets.only(
+                              left: 24, top: 28, bottom: 28),
+                          hintText: 'Comments',
+                          hintStyle: TextStyle(
+                              color: ColorConstants.black1.withOpacity(0.3),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                              fontFamily: FontFamilyConstants.firasans),
+                        ),
+                      ),
                     ],
                   ),
                 );
@@ -119,6 +159,7 @@ class OffTargetDialogView extends GetView {
     if (products!.isNotEmpty) {
       products!.forEach((element) {
         controllers!.add(TextEditingController());
+        commentsControllers!.add(TextEditingController());
       });
     }
   }
