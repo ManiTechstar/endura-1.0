@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:endura_app/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/analysis_form_company_selector_controller.dart';
 import 'package:endura_app/core/base/controllers/base_controller.dart';
@@ -12,7 +14,7 @@ import 'package:shimmer/shimmer.dart';
 
 class AnalysisFormRepresentativeSearchSelectView
     extends SearchView<AccountRepresentativeSelectorController> {
-  AnalysisFormRepresentativeSearchSelectView();
+  AnalysisFormRepresentativeSearchSelectView({Key? key}) : super(key: key);
 
   @override
   Widget cBuild(BuildContext context,
@@ -26,22 +28,34 @@ class AnalysisFormRepresentativeSearchSelectView
                   items: cController.routes,
                   searchHint: 'Select Representative',
                   title: 'Representatives',
-                  function: (index) async {
-                    print(cController.model.value.result![index].sId);
-                    print(cController.model.value.result![index].name);
+                  // function: (index) async {
+                  //   print(cController.model.value.result![index].sId);
+                  //   print(cController.model.value.result![index].name);
 
-                    AnalysisFormCompanySelectorController
-                        analysisFormCompanySelectorController =
-                        Get.find<AnalysisFormCompanySelectorController>();
-                    await analysisFormCompanySelectorController
-                        .getCustomersOrCompaniesByRepId(
-                            id: cController.model.value.result![index].sId);
-                    analysisFormCompanySelectorController
-                        .selectedCompanyName.value = 'Select Company';
-                  },
+                  //   AnalysisFormCompanySelectorController
+                  //       analysisFormCompanySelectorController =
+                  //       Get.find<AnalysisFormCompanySelectorController>();
+                  //   await analysisFormCompanySelectorController
+                  //       .getCustomersOrCompaniesByRepId(
+                  //           id: cController.model.value.result![index].sId);
+                  //   analysisFormCompanySelectorController
+                  //       .selectedCompanyName.value = 'Select Company';
+                  // },
                 ));
 
                 if (item != null) {
+                  List list = cController.model.value.result!
+                      .where((element) => element.name == item)
+                      .toList();
+
+                  AnalysisFormCompanySelectorController
+                      analysisFormCompanySelectorController =
+                      Get.find<AnalysisFormCompanySelectorController>();
+                  await analysisFormCompanySelectorController
+                      .getCustomersOrCompaniesByRepId(id: list[0].sId);
+                  analysisFormCompanySelectorController
+                      .selectedCompanyName.value = 'Select Company';
+
                   cController.selectedRepresentativeName(item);
                 }
               },

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_tech_home_company_selector_controller.dart';
 import 'package:endura_app/app/modules/dropdown_selector/controllers/service_tech_home_representative_selector_controller.dart';
 import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
@@ -13,7 +15,7 @@ import 'package:shimmer/shimmer.dart';
 
 class ServiceTechRepresentativeSearchSelectView
     extends SearchView<ServiceTechHomeRepresentativeSelectorController> {
-  ServiceTechRepresentativeSearchSelectView();
+  ServiceTechRepresentativeSearchSelectView({Key? key}) : super(key: key);
 
   @override
   Widget cBuild(BuildContext context,

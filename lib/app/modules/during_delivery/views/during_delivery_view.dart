@@ -69,13 +69,15 @@ class DuringDeliveryView extends GetView<DuringDeliveryController> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    step.stepName!,
-                    style: TextStyle(
-                        color: ColorConstants.color4,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14,
-                        fontFamily: FontFamilyConstants.firasansMedium),
+                  Expanded(
+                    child: Text(
+                      step.stepName!,
+                      style: TextStyle(
+                          color: ColorConstants.color4,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          fontFamily: FontFamilyConstants.firasansMedium),
+                    ),
                   ),
                 ],
               ),
@@ -94,6 +96,7 @@ class DuringDeliveryView extends GetView<DuringDeliveryController> {
                 ),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,9 +105,9 @@ class DuringDeliveryView extends GetView<DuringDeliveryController> {
                       SvgPicture.asset(ImageConstants.document,
                           height: 24, width: 24),
                       const SizedBox(width: 11),
-                      SizedBox(
+                      Expanded(
                         child: Text(
-                          step.stepDescription!,
+                          step.stepName ?? '',
                           style: TextStyle(
                               color: ColorConstants.black1,
                               fontWeight: FontWeight.w800,
