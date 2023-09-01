@@ -32,15 +32,7 @@ class AnalysisFormCompanySearchSelectView
                       items: cController.companies,
                       searchHint: 'Select Company',
                       title: 'Company',
-                      // function: (index) {
-                      //   print(
-                      //       'INDEXED ==> ${cController.model.value.result![index].customerId}');
-
-                      //   Get.find<AnalysisFormLeaseSelectorController>()
-                      //       .getLocationsByCustomerId(
-                      //           customerId: cController
-                      //               .model.value.result![index].customerId);
-                      // },
+                      
                     ));
 
                     if (item != null) {

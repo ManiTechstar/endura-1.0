@@ -48,19 +48,19 @@ class ServiceReportRepresentativeSearchSelectView
                 );
 
                 if (item != null) {
-                  List<AccountRepresentativeListModelResult> list = cController
+                  AccountRepresentativeListModelResult list = cController
                       .model.value.result!
-                      .where((element) => element.name == item)
-                      .toList();
+                      .firstWhere((element) => element.name == item);
 
-                  print(list[0].sId);
-                  print(list[0].name);
+                  cController.selectedRepresentativeId = list.sId!;
+                  print(list.sId);
+                  print(list.name);
 
                   ServiceReportCompanySelectorController
                       analysisFormCompanySelectorController =
                       Get.find<ServiceReportCompanySelectorController>();
                   await analysisFormCompanySelectorController
-                      .getCustomersOrCompaniesByRepId(id: list[0].sId);
+                      .getCustomersOrCompaniesByRepId(id: list.sId);
                   analysisFormCompanySelectorController
                       .selectedCompanyName.value = 'Select Company';
 
