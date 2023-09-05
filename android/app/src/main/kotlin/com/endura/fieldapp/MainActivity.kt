@@ -1,4 +1,4 @@
-package com.example.endura_app
+package com.endura.fieldapp
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,10 +1,21 @@
 import 'package:endura_app/app/routes/app_pages.dart';
 import 'package:endura_app/core/utilities/shared_preferance_helper.dart';
 import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class SplashController extends GetxController {
   @override
   void onInit() {
+    PackageInfo _packageInfo = PackageInfo(
+      appName: 'Unknown',
+      packageName: 'Unknown',
+      version: 'Unknown',
+      buildNumber: 'Unknown',
+      buildSignature: 'Unknown',
+      installerStore: 'Unknown',
+    );
+
+    print("PACKAGE NAME ==> ${_packageInfo.packageName}");
     super.onInit();
   }
 
