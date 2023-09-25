@@ -1,5 +1,5 @@
 name: endura_app
-version: 1.0.0+1
+version: 1.0.1
 publish_to: none
 description: A new Flutter project.
 environment: 
@@ -21,7 +21,6 @@ dependencies:
     sdk: flutter
   shimmer: ^2.0.0
   timelines: ^0.1.0
-  package_info_plus: ^4.1.0
   
   
 
