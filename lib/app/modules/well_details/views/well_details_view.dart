@@ -235,7 +235,7 @@ class WellDetailsView extends GetView<WellDetailsController> {
                         text: 'Update GPS Location',
                         onClick: () {
                           // view confirmation popup
-                          controller.getCurrentLocationAndSendToApi();
+                          controller.pickATask();
                         },
                         color: ColorConstants.black1),
                   ],

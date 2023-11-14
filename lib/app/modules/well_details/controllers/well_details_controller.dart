@@ -1,6 +1,7 @@
 import 'package:fieldapp/app/data/model/get_wel_lat_long_model.dart';
 import 'package:fieldapp/app/providers/well_details_provider.dart';
 import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/dialogs/views/action_dialog_view.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:maps_launcher/maps_launcher.dart';
@@ -30,6 +31,19 @@ class WellDetailsController extends BaseController {
 
   void increment() => count.value++;
 
+  void pickATask() {
+    Get.dialog(ActionDialogView(
+      message: 'Are you sure want to update the GPS Location?',
+      yesAction: () {
+        Get.back();
+        getCurrentLocationAndSendToApi();
+      },
+      noAction: () {
+        Get.back();
+      },
+    ));
+  }
+
   getCurrentLocationAndSendToApi() async {
     currentLocation = await readCurrentLocation();
     setWelLocation(
@@ -53,7 +67,6 @@ class WellDetailsController extends BaseController {
     MapsLauncher.launchCoordinates(latLongModel.value.result![0],
         latLongModel.value.result![1], '$welName Location');
   }
-
 
   Future<void> setWelLocation({lat, long}) async {
     apiState.value = APIState.LOADING;
