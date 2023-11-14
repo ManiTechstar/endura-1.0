@@ -33,7 +33,11 @@ class WellDetailsController extends BaseController {
 
   void pickATask() {
     Get.dialog(ActionDialogView(
-      message: 'Are you sure want to update the GPS Location?',
+      yesButtonText: 'Update',
+      title: 'Warning',
+      noButtonText: 'Cancel',
+      message:
+          'Updating GPS Location! This will OVERWRITE the coordinates of Well Name - $welName to your current position.',
       yesAction: () {
         Get.back();
         getCurrentLocationAndSendToApi();

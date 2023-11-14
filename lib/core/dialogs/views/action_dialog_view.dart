@@ -4,7 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ActionDialogView extends GetView {
-  ActionDialogView({this.yesAction, this.message, this.noAction, Key? key})
+  String title;
+  String yesButtonText;
+  String noButtonText;
+
+  ActionDialogView(
+      {this.yesAction,
+      this.title = 'Action',
+      this.yesButtonText = 'Yes',
+      this.noButtonText = 'No',
+      this.message,
+      this.noAction,
+      Key? key})
       : super(key: key);
   Function()? yesAction;
   Function()? noAction;
@@ -32,10 +43,10 @@ class ActionDialogView extends GetView {
       padding: const EdgeInsets.all(12.0),
       width: double.infinity,
       color: ColorConstants.black1,
-      child: const Text(
-        'Action',
+      child: Text(
+        title,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
             color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
       ),
     );
@@ -64,10 +75,10 @@ class ActionDialogView extends GetView {
               child: Container(
                   padding: const EdgeInsets.all(12.0),
                   color: ColorConstants.black1,
-                  child: const Text(
-                    'Yes',
+                  child: Text(
+                    yesButtonText,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
                         fontSize: 14),
@@ -80,10 +91,10 @@ class ActionDialogView extends GetView {
               onTap: noAction,
               child: Container(
                 padding: const EdgeInsets.all(12.0),
-                child: const Text(
-                  'No',
+                child: Text(
+                  noButtonText,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: ColorConstants.black1,
                       fontWeight: FontWeight.w800,
                       fontSize: 14),
