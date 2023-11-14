@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/user_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
-import 'package:endura_app/core/utilities/shared_preferance_helper.dart';
+import 'package:fieldapp/app/data/model/user_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
+import 'package:fieldapp/core/utilities/shared_preferance_helper.dart';
 
 class LoginServiceProvider extends BaseHttpClient {
   Future<UserModel> login({params}) async {

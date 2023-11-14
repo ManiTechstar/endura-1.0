@@ -1,9 +1,9 @@
-import 'package:endura_app/app/data/model/cumulative_products_model.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/app/providers/cumulatives_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/cumulative_products_model.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/app/providers/cumulatives_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class CumulativeProductsController extends BaseController {

@@ -1,7 +1,7 @@
-import 'package:endura_app/app/data/model/open_tasks_list_model.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/utilities/date_utility.dart';
+import 'package:fieldapp/app/data/model/open_tasks_list_model.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/utilities/date_utility.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

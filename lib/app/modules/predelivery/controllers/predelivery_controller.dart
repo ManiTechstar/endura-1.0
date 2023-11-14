@@ -1,11 +1,11 @@
-import 'package:endura_app/app/data/model/predelivery_steps_model.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/driver_home_controller.dart';
-import 'package:endura_app/app/providers/predelivery_service_provider.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/dialogs/views/action_dialog_view.dart';
-import 'package:endura_app/core/dialogs/views/load_product_dialog_view.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/predelivery_steps_model.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/driver_home_controller.dart';
+import 'package:fieldapp/app/providers/predelivery_service_provider.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/dialogs/views/action_dialog_view.dart';
+import 'package:fieldapp/core/dialogs/views/load_product_dialog_view.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class PredeliveryController extends BaseController {

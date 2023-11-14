@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/delivery_steps_model.dart';
-import 'package:endura_app/app/data/model/during_delivery_task_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
+import 'package:fieldapp/app/data/model/delivery_steps_model.dart';
+import 'package:fieldapp/app/data/model/during_delivery_task_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
 
 class DuringdeliveryServiceProvider extends BaseHttpClient {
   Future getDuringDeliverySteps({taskId}) async {

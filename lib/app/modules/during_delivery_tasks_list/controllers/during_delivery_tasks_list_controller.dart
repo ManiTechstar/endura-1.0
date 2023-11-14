@@ -1,7 +1,7 @@
-import 'package:endura_app/app/data/model/during_delivery_task_model.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/driver_home_controller.dart';
-import 'package:endura_app/app/providers/during_delivery_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/app/data/model/during_delivery_task_model.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/driver_home_controller.dart';
+import 'package:fieldapp/app/providers/during_delivery_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
 import 'package:get/get.dart';
 
 class DuringDeliveryTasksListController extends BaseController {

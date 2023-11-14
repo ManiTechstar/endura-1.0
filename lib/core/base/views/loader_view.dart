@@ -1,4 +1,4 @@
-import 'package:endura_app/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 

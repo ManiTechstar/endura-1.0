@@ -1,6 +1,6 @@
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/constants/image_constants.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/constants/image_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';

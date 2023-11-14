@@ -1,5 +1,5 @@
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/loader_view.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/loader_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

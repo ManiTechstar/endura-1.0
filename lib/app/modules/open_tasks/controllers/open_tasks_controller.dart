@@ -1,12 +1,12 @@
-import 'package:endura_app/app/data/model/open_tasks_list_model.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/app/providers/schedule_service_provider.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/dialogs/views/action_dialog_view.dart';
-import 'package:endura_app/core/dialogs/views/task_details_dialog_view.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/open_tasks_list_model.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/app/providers/schedule_service_provider.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/dialogs/views/action_dialog_view.dart';
+import 'package:fieldapp/core/dialogs/views/task_details_dialog_view.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -29,7 +29,6 @@ class OpenTasksController extends BaseController {
   @override
   void onInit() {
     openTasks = Rx.new([]);
-
 
     searchController = TextEditingController();
     getOpenTasks();

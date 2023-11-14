@@ -1,11 +1,11 @@
-import 'package:endura_app/app/modules/dashboard/controllers/service_tech_home_controller.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/service_tech_lease_products_controller.dart';
-import 'package:endura_app/app/modules/dashboard/views/service_tech_home/off_target_dialog_view.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/service_tech_home_lease_selector_controller.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/service_tech_home_controller.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/service_tech_lease_products_controller.dart';
+import 'package:fieldapp/app/modules/dashboard/views/service_tech_home/off_target_dialog_view.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/service_tech_home_lease_selector_controller.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
@@ -57,8 +57,8 @@ class ProductsView extends GetView<ServiceTechLeaseProductsController> {
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child:const Row(
-                      children:  [
+                    child: const Row(
+                      children: [
                         Expanded(
                           child: Text(
                             'Product',

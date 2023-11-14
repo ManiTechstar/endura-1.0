@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:endura_app/core/constants/constants.dart';
+import 'package:fieldapp/core/constants/constants.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -38,7 +38,6 @@ abstract class BaseHttpClient {
       rethrow;
     }
   }
-
 
   Future<http.Response> put(String path, {Map<String, dynamic>? body}) async {
     try {

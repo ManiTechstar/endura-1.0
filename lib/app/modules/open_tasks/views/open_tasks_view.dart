@@ -1,14 +1,15 @@
-import 'package:endura_app/app/data/model/open_tasks_list_model.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/driver_home_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/open_tasks/controllers/open_tasks_controller.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/base_app_bar.dart';
-import 'package:endura_app/core/base/views/loader_view.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/open_tasks_list_model.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/driver_home_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/open_tasks/controllers/open_tasks_controller.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/base_app_bar.dart';
+import 'package:fieldapp/core/base/views/loader_view.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -285,66 +286,116 @@ class OpenTasksView extends GetView<OpenTasksController> {
                 fontFamily: FontFamilyConstants.mulishExtraBold),
           ),
           const SizedBox(height: 15),
-          Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              InkWell(
-                  onTap: () {
-                    controller.updateSelectedTasks(index: index);
-                  },
-                  child: Icon(!openTask.isSelected
-                      ? Icons.check_box_outline_blank
-                      : Icons.check_box_outlined)),
-              const Spacer(),
-              InkWell(
-                onTap: () {
-                  controller.pickATask(
-                      taskId: openTask.sId, taskName: openTask.taskName);
-                },
-                child: Container(
-                  padding: const EdgeInsets.only(
-                      top: 8, bottom: 8, left: 5, right: 5),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: ColorConstants.color2),
-                  child: Text(
-                    "Assign To Yourself",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        letterSpacing: 0.25,
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontFamily: FontFamilyConstants.firasansExtraBold,
-                        fontWeight: FontWeight.w500),
+              Row(
+                children: [
+                  InkWell(
+                      onTap: () {
+                        controller.updateSelectedTasks(index: index);
+                      },
+                      child: Icon(!openTask.isSelected
+                          ? Icons.check_box_outline_blank
+                          : Icons.check_box_outlined)),
+                  const Spacer(),
+                  // InkWell(
+                  //     onTap: () {
+                  // Get.toNamed(Routes.WELL_DETAILS,
+                  //     arguments: {'wellName': openTask.leaseLocation});
+                  //     },
+                  //     child: const Icon(
+                  //       Icons.remove_red_eye,
+                  //       color: ColorConstants.color2,
+                  //     )),
+                  // const SizedBox(
+                  //   width: 10.0,
+                  // ),
+                  InkWell(
+                    onTap: () {
+                      controller.pickATask(
+                          taskId: openTask.sId, taskName: openTask.taskName);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.only(
+                          top: 8, bottom: 8, left: 5, right: 5),
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          color: ColorConstants.color2),
+                      child: Text(
+                        "Assign To Yourself",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            letterSpacing: 0.25,
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: FontFamilyConstants.firasansExtraBold,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    width: 10.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      controller.viewTaskDetails(
+                        openTask: openTask,
+                      );
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.only(
+                          top: 8, bottom: 8, left: 5, right: 5),
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          color: ColorConstants.color2),
+                      child: Text(
+                        "View Task Details",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            letterSpacing: 0.25,
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: FontFamilyConstants.firasansExtraBold,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  )
+                ],
               ),
               const SizedBox(
-                width: 20.0,
+                height: 5.0,
               ),
-              InkWell(
-                onTap: () {
-                  controller.viewTaskDetails(
-                    openTask: openTask,
-                  );
-                },
-                child: Container(
-                  padding: const EdgeInsets.only(
-                      top: 8, bottom: 8, left: 5, right: 5),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: ColorConstants.color2),
-                  child: Text(
-                    "View Task Details",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        letterSpacing: 0.25,
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontFamily: FontFamilyConstants.firasansExtraBold,
-                        fontWeight: FontWeight.w500),
+              Row(
+                children: [
+                  const Spacer(),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed(Routes.WELL_DETAILS,
+                          arguments: {'wellName': openTask.leaseLocation});
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 10,
+                      ),
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          color: ColorConstants.color2),
+                      child: Text(
+                        "View Well Details",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            letterSpacing: 0.25,
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: FontFamilyConstants.firasansExtraBold,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
                   ),
-                ),
-              )
+                ],
+              ),
             ],
           ),
           const SizedBox(height: 5),

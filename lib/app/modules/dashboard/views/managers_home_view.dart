@@ -1,7 +1,7 @@
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/constants/image_constants.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/constants/image_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

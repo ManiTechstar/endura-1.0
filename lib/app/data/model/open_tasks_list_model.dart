@@ -1,4 +1,4 @@
-import 'package:endura_app/core/utilities/date_utility.dart';
+import 'package:fieldapp/core/utilities/date_utility.dart';
 
 class OpenTasksListModel {
   OpenTasksListModel();

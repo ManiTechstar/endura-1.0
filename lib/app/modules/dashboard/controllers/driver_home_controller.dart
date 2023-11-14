@@ -1,10 +1,10 @@
-import 'package:endura_app/app/data/model/predelivery_ids_model.dart';
-import 'package:endura_app/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/app/providers/predelivery_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/predelivery_ids_model.dart';
+import 'package:fieldapp/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/app/providers/predelivery_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class DriverHomeController extends BaseController {

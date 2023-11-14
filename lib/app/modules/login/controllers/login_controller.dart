@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/user_model.dart';
-import 'package:endura_app/app/providers/login_service_provider.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/shared_preferance_helper.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/user_model.dart';
+import 'package:fieldapp/app/providers/login_service_provider.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/shared_preferance_helper.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/products_by_location_model.dart';
-import 'package:endura_app/app/data/model/products_by_well_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
+import 'package:fieldapp/app/data/model/products_by_location_model.dart';
+import 'package:fieldapp/app/data/model/products_by_well_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
 
 class ServiceReportProvider extends BaseHttpClient {
   Future<ProductsByLocationModel> getProductsByLocation(

@@ -1,13 +1,13 @@
-import 'package:endura_app/app/data/model/during_delivery_task_model.dart';
-import 'package:endura_app/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/driver_home_controller.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/base_app_bar.dart';
-import 'package:endura_app/core/base/views/loader_view.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/during_delivery_task_model.dart';
+import 'package:fieldapp/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/driver_home_controller.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/base_app_bar.dart';
+import 'package:fieldapp/core/base/views/loader_view.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

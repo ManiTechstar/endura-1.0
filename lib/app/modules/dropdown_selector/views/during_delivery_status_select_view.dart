@@ -1,12 +1,12 @@
-import 'package:endura_app/app/data/model/sub_task_steps_model.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/analysis_form_company_selector_controller.dart';
-import 'package:endura_app/app/modules/during_delivery/controllers/during_delivery_controller.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/search_selection_dialog_view.dart';
-import 'package:endura_app/core/base/views/search_view.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/app/data/model/sub_task_steps_model.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/analysis_form_company_selector_controller.dart';
+import 'package:fieldapp/app/modules/during_delivery/controllers/during_delivery_controller.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/search_selection_dialog_view.dart';
+import 'package:fieldapp/core/base/views/search_view.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -29,7 +29,6 @@ class DuringDeliveryStatusSelectView
                   items: _getAllNames(),
                   searchHint: 'Update Status',
                   title: 'Task Status',
-                  
                 ));
 
                 if (item != null) {

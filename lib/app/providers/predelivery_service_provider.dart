@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/predelivery_ids_model.dart';
-import 'package:endura_app/app/data/model/predelivery_steps_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
+import 'package:fieldapp/app/data/model/predelivery_ids_model.dart';
+import 'package:fieldapp/app/data/model/predelivery_steps_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
 
 class PredeliveryServiceProvider extends BaseHttpClient {
   Future<PredeliveryStepsModel> getPredeliverySelectiveSteps({params}) async {
@@ -35,7 +35,8 @@ class PredeliveryServiceProvider extends BaseHttpClient {
     }
   }
 
-  Future<String> completePredelivery({required Map<String, dynamic> params}) async {
+  Future<String> completePredelivery(
+      {required Map<String, dynamic> params}) async {
     try {
       print('params');
       print(params);
@@ -50,7 +51,8 @@ class PredeliveryServiceProvider extends BaseHttpClient {
     }
   }
 
-  Future<PredeliveryIdsModel> todayPredeliveryStatus({required String email}) async {
+  Future<PredeliveryIdsModel> todayPredeliveryStatus(
+      {required String email}) async {
     try {
       final response =
           await get('/user/checkTodayPreDelivery?user_email=$email');
@@ -59,8 +61,7 @@ class PredeliveryServiceProvider extends BaseHttpClient {
 
       print(responseBody);
 
-      PredeliveryIdsModel model =
-          PredeliveryIdsModel.fromJson(responseBody);
+      PredeliveryIdsModel model = PredeliveryIdsModel.fromJson(responseBody);
       return model;
     } catch (e) {
       rethrow;

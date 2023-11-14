@@ -22,6 +22,8 @@ import '../modules/service_report/bindings/service_report_binding.dart';
 import '../modules/service_report/views/service_report_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/well_details/bindings/well_details_binding.dart';
+import '../modules/well_details/views/well_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.DURING_DELIVERY_TASKS_LIST,
       page: () => const DuringDeliveryTasksListView(),
       binding: DuringDeliveryTasksListBinding(),
+    ),
+    GetPage(
+      name: _Paths.WELL_DETAILS,
+      page: () => const WellDetailsView(),
+      binding: WellDetailsBinding(),
     ),
   ];
 }

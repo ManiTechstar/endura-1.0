@@ -1,11 +1,11 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:endura_app/app/modules/dropdown_selector/controllers/warehouse_selector_controller.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/search_selection_dialog_view.dart';
-import 'package:endura_app/core/base/views/search_view.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/warehouse_selector_controller.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/search_selection_dialog_view.dart';
+import 'package:fieldapp/core/base/views/search_view.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/cumulative_products_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
-import 'package:endura_app/core/utilities/date_utility.dart';
+import 'package:fieldapp/app/data/model/cumulative_products_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
+import 'package:fieldapp/core/utilities/date_utility.dart';
 
 class CumulativesServiceProvider extends BaseHttpClient {
   Future<CumulativeProductsModel> getTodaysProductByRoute({routeName}) async {

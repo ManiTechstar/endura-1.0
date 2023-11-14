@@ -1,14 +1,14 @@
-import 'package:endura_app/app/data/model/products_by_location_model.dart';
-import 'package:endura_app/app/data/parser_models/chemical_list_parser.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_company_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/service_report_lease_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/warehouse_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/app/providers/service_report_provider.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/products_by_location_model.dart';
+import 'package:fieldapp/app/data/parser_models/chemical_list_parser.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/account_representative_selector_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/service_report_company_selector_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/service_report_lease_selector_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/warehouse_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/app/providers/service_report_provider.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 

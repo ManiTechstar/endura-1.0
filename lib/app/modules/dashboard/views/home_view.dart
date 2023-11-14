@@ -1,13 +1,13 @@
-import 'package:endura_app/app/modules/dashboard/controllers/service_tech_home_controller.dart';
-import 'package:endura_app/app/modules/dashboard/views/driver_home_view.dart';
-import 'package:endura_app/app/modules/dashboard/views/managers_home_view.dart';
-import 'package:endura_app/app/modules/dashboard/views/service_tech_home/service_tech_home_view.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/core/base/views/base_app_bar.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/utilities/date_utility.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/service_tech_home_controller.dart';
+import 'package:fieldapp/app/modules/dashboard/views/driver_home_view.dart';
+import 'package:fieldapp/app/modules/dashboard/views/managers_home_view.dart';
+import 'package:fieldapp/app/modules/dashboard/views/service_tech_home/service_tech_home_view.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/core/base/views/base_app_bar.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/utilities/date_utility.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

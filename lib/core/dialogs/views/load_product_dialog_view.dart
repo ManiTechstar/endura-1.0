@@ -1,6 +1,6 @@
-import 'package:endura_app/app/data/model/predelivery_steps_model.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/utilities/date_utility.dart';
+import 'package:fieldapp/app/data/model/predelivery_steps_model.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/utilities/date_utility.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

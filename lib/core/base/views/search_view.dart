@@ -1,4 +1,4 @@
-import 'package:endura_app/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

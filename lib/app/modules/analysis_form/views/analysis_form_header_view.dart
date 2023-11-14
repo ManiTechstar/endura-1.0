@@ -1,11 +1,11 @@
-import 'package:endura_app/app/modules/analysis_form/controllers/analysis_form_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/analysis_form_company_search_select_view.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/analysis_form_leases_search_select_view.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/analysis_form_representative_search_select_view.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/warehouse_search_select_view.dart';
-import 'package:endura_app/core/base/views/custom_text_form_field.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
+import 'package:fieldapp/app/modules/analysis_form/controllers/analysis_form_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/views/analysis_form_company_search_select_view.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/views/analysis_form_leases_search_select_view.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/views/analysis_form_representative_search_select_view.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/views/warehouse_search_select_view.dart';
+import 'package:fieldapp/core/base/views/custom_text_form_field.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

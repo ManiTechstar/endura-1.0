@@ -1,6 +1,6 @@
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/login/controllers/login_controller.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/login/controllers/login_controller.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

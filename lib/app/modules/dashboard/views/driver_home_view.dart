@@ -1,16 +1,16 @@
-import 'package:endura_app/app/data/model/assigned_schedules_list_model.dart';
-import 'package:endura_app/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
-import 'package:endura_app/app/modules/dashboard/controllers/driver_home_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
-import 'package:endura_app/app/modules/dropdown_selector/views/routes_search_select_view.dart';
-import 'package:endura_app/app/modules/open_tasks/controllers/open_tasks_controller.dart';
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/constants/image_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/assigned_schedules_list_model.dart';
+import 'package:fieldapp/app/modules/assigned_tasks/controllers/assigned_tasks_controller.dart';
+import 'package:fieldapp/app/modules/dashboard/controllers/driver_home_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/controllers/routes_selector_controller.dart';
+import 'package:fieldapp/app/modules/dropdown_selector/views/routes_search_select_view.dart';
+import 'package:fieldapp/app/modules/open_tasks/controllers/open_tasks_controller.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/constants/image_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -402,9 +402,8 @@ class DriverHomeView extends GetView<DriverHomeController> {
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w500,
                                                 fontSize: 15,
-                                                fontFamily:
-                                                    FontFamilyConstants
-                                                        .mulishExtraBold),
+                                                fontFamily: FontFamilyConstants
+                                                    .mulishExtraBold),
                                           ),
                                           const SizedBox(
                                             height: 8.0,
@@ -415,9 +414,8 @@ class DriverHomeView extends GetView<DriverHomeController> {
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w500,
                                                 fontSize: 15,
-                                                fontFamily:
-                                                    FontFamilyConstants
-                                                        .mulishExtraBold),
+                                                fontFamily: FontFamilyConstants
+                                                    .mulishExtraBold),
                                           ),
                                         ],
                                       ),

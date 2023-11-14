@@ -1,7 +1,7 @@
-import 'package:endura_app/app/data/model/analysis_form_customer_list_model.dart';
-import 'package:endura_app/app/providers/dropdown_selector_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/analysis_form_customer_list_model.dart';
+import 'package:fieldapp/app/providers/dropdown_selector_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class AnalysisFormCompanySelectorController extends BaseController {

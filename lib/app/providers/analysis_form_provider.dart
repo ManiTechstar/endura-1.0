@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:endura_app/core/base/services/base_http_client.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
 
 class AnalysisFormProvider extends BaseHttpClient {
   Future<String> submitAnalysisForm({params}) async {

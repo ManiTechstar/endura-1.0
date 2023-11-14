@@ -1,10 +1,9 @@
-
 // ignore_for_file: must_be_immutable
 
-import 'package:endura_app/app/data/model/products_by_well_model.dart';
-import 'package:endura_app/core/constants/color_constants.dart';
-import 'package:endura_app/core/constants/font_family_constants.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/app/data/model/products_by_well_model.dart';
+import 'package:fieldapp/core/constants/color_constants.dart';
+import 'package:fieldapp/core/constants/font_family_constants.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

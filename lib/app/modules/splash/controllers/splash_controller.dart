@@ -1,5 +1,5 @@
-import 'package:endura_app/app/routes/app_pages.dart';
-import 'package:endura_app/core/utilities/shared_preferance_helper.dart';
+import 'package:fieldapp/app/routes/app_pages.dart';
+import 'package:fieldapp/core/utilities/shared_preferance_helper.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {

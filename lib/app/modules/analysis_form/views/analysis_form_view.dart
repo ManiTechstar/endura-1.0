@@ -1,10 +1,10 @@
-import 'package:endura_app/app/modules/analysis_form/views/analysis_form_chemicals_in_use_view.dart';
-import 'package:endura_app/app/modules/analysis_form/views/analysis_form_header_view.dart';
-import 'package:endura_app/app/modules/analysis_form/views/analysis_form_production_view.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/base/views/base_app_bar.dart';
-import 'package:endura_app/core/base/views/loader_view.dart';
-import 'package:endura_app/core/util_widgets/selector_container.dart';
+import 'package:fieldapp/app/modules/analysis_form/views/analysis_form_chemicals_in_use_view.dart';
+import 'package:fieldapp/app/modules/analysis_form/views/analysis_form_header_view.dart';
+import 'package:fieldapp/app/modules/analysis_form/views/analysis_form_production_view.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/base/views/base_app_bar.dart';
+import 'package:fieldapp/core/base/views/loader_view.dart';
+import 'package:fieldapp/core/util_widgets/selector_container.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

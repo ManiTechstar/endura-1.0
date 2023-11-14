@@ -1,8 +1,8 @@
-import 'package:endura_app/app/data/model/service_tech_home_lease_model.dart';
+import 'package:fieldapp/app/data/model/service_tech_home_lease_model.dart';
 
-import 'package:endura_app/app/providers/dropdown_selector_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/providers/dropdown_selector_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class ServiceTechHomeFormLeaseSelectorController extends BaseController {

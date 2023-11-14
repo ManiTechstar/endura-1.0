@@ -16,6 +16,7 @@ abstract class Routes {
   static const PREDELIVERY = _Paths.PREDELIVERY;
   static const DURING_DELIVERY = _Paths.DURING_DELIVERY;
   static const DURING_DELIVERY_TASKS_LIST = _Paths.DURING_DELIVERY_TASKS_LIST;
+  static const WELL_DETAILS = _Paths.WELL_DETAILS;
 }
 
 abstract class _Paths {
@@ -34,4 +35,5 @@ abstract class _Paths {
   static const PREDELIVERY = '/predelivery';
   static const DURING_DELIVERY = '/during-delivery';
   static const DURING_DELIVERY_TASKS_LIST = '/during-delivery-tasks-list';
+  static const WELL_DETAILS = '/well-details';
 }

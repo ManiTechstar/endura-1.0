@@ -1,4 +1,4 @@
-import 'package:endura_app/core/constants/image_constants.dart';
+import 'package:fieldapp/core/constants/image_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

@@ -1,7 +1,7 @@
-import 'package:endura_app/app/data/model/warehouse_model.dart';
-import 'package:endura_app/app/providers/dropdown_selector_service_provider.dart';
-import 'package:endura_app/core/base/controllers/base_controller.dart';
-import 'package:endura_app/core/utilities/snackbar_supporter.dart';
+import 'package:fieldapp/app/data/model/warehouse_model.dart';
+import 'package:fieldapp/app/providers/dropdown_selector_service_provider.dart';
+import 'package:fieldapp/core/base/controllers/base_controller.dart';
+import 'package:fieldapp/core/utilities/snackbar_supporter.dart';
 import 'package:get/get.dart';
 
 class WarehouseSelectorController extends BaseController {
@@ -41,7 +41,8 @@ class WarehouseSelectorController extends BaseController {
     if (isInternetConnected) {
       try {
         apiState.value = APIState.LOADING;
-        models.value = await DropdownSelectorServiceProvider().getAllWarehouses();
+        models.value =
+            await DropdownSelectorServiceProvider().getAllWarehouses();
         _setValuesToList();
         apiState.value = APIState.COMPLETED;
       } catch (e) {
@@ -54,5 +55,4 @@ class WarehouseSelectorController extends BaseController {
           message: 'Please check your network');
     }
   }
-
 }

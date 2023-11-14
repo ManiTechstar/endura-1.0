@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:endura_app/app/data/model/assigned_schedules_list_model.dart';
-import 'package:endura_app/app/data/model/open_tasks_list_model.dart';
-import 'package:endura_app/core/base/services/base_http_client.dart';
+import 'package:fieldapp/app/data/model/assigned_schedules_list_model.dart';
+import 'package:fieldapp/app/data/model/open_tasks_list_model.dart';
+import 'package:fieldapp/core/base/services/base_http_client.dart';
 
 class ScheduleServiceProvider extends BaseHttpClient {
   Future<OpenTasksListModel> getOpenSchedules({params}) async {
@@ -38,7 +38,7 @@ class ScheduleServiceProvider extends BaseHttpClient {
     final response = await post('/task/pickMultipleTasks', body: params);
 
     final responseBody = jsonDecode(response.body);
-    
+
     return responseBody['message'];
   }
 }
