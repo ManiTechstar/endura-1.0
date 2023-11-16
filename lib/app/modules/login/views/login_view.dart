@@ -17,11 +17,22 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: Containers().loginButtonContainer(
-          text: 'Login',
-          onClick: () {
-            controller.login(params: {});
-          },
+        bottomNavigationBar: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Containers().loginButtonContainer(
+              text: 'Login',
+              onClick: () {
+                controller.login(params: {});
+              },
+            ),
+            Containers().loginButtonContainer(
+              text: 'Login Via Azure',
+              onClick: () {
+                // controller.login(params: {});
+              },
+            ),
+          ],
         ),
         body: SafeArea(
           child: Obx(
